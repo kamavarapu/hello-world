@@ -30,7 +30,7 @@ exports.posts = function(req, res) {
 				res.send('Oops: ' + err);
 			}
 			if(!doc) {
-				res.send(result);
+				res.render('posts/index', {posts: result});
 				return;
 			}
 			result.push(doc);
@@ -50,7 +50,7 @@ exports.post = function(req, res) {
 			if(err) {
 				res.send('Oops: ' + err);
 			}
-			res.send(doc);
+			res.render('posts/post', {post: doc});
 		});
 
 		db.close();	

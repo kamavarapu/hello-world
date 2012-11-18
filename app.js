@@ -11,6 +11,8 @@ var app = express();
  * Configuration
  */
 
+app.set('view engine', 'jade');
+
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
