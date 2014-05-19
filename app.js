@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-
+// samples changes
 var express = require('express');
 var blog = require('./routes/blog');
 
